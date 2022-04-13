@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+    <body>
+        <form action="expression.php" method="get">
+            <br>
+            Enter Email Adress: <input type="text" size="16" maxlength="20" name="email">
+            </br> <br/>
+            Fullname: <input type="text" size="40" maxlength="60" name="studentname">
+            <br/> <br/>
+            StudentID: <input type="text" size="8" maxlength="8" name="stID">
+            <br/> <br/>
+            Class: <input type="text" size="6" name="class">
+            <br/> <br/>
+            University: <input type="text" size="40" maxlength="60" name="uni">
+            <br/> <br/>
+            Hobby: <ul name="hobby" >
+                <li><input type="checkbox" name="hobby1" value="Sport" id="0"> Sport</li>
+                <li><input type="checkbox" name="hobby2" value="Movie" id="1"> Movie</li>
+                <li><input type="checkbox" name="hobby3" value="Music" id="2"> Music</li>
+                <li><input type="checkbox" name="hobby4" value="Game" id="3"> Game</li>
+            </ul>
+            <br/>
+            May we contact you?
+            <br>
+            Yes
+            <input type="radio" name="contact" value="Yes" name="yes">
+            No
+            <input type="radio" name="contact" value="No" name="no">
+            <br></br>
+            <input type="submit" value="click to submit">
+            <input type="reset" value="erase and resstart">
+        </form>
+    </body>
+</html>
