@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1> <b>Category Administration</b> </h1>
+    <?php
+    $host = 'db';
+    $user = 'root';
+    $pass = 'example';
+    $mydb = 'business_service';
+    $table_name = 'Categories';
+
+    $connect = new mysqli($host, $user, $pass, $mydb);
+
+    if ($connect->connect_error) {
+        die("Cannot connect to $server using $user");
+    } else {
+        $query = "SELECT * FROM $table_name";
+        $results_id = $connect->query($query);
+
+        if ($results_id) {
+            print '<table border=1>';
+            print '<th>CatID<th>Title<th>Description';
+            while ($row = $results_id->fetch_object()) {
+                print '<tr>';
+                foreach ($row as $field) {
+                    print "<td>$field</td> ";
+                }
+                print '</tr>';
+            }
+        } else {
+            die("Query=$query failed!");
+        }
+    }
+    print '</tr>';
+    print "<form action='./exp1.php' method='POST'> <td>";
+    print "<input type='text' name='catid' placeholder='CatID'>";
+    print "<td>";
+    print "<input type='text' name='title' placeholder='Title'>";
+    print "<td>";
+    print "<input type='text' name='description' placeholder='Description'>";
+    print '</td>';
+    print "<button type='submit' name='submit'>Add Category</button>";
+    print "</form>";
+    ?>
+    </table>
+    <a href="exp2.php">
+        <button>EXP 2</button>
+    </a>
+
+</body>
+
 </html>

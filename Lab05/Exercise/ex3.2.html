@@ -1,15 +1,51 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+Shortcuts simplify My Drive … 
+In the coming weeks, items in more than one folder will be replaced by shortcuts. Access to files and folders won't change.Learn more
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+
+<body>
+    <?php
+    $host = 'db';
+    $user = 'root';
+    $pass = 'example';
+    $mydb = 'business_service';
+    $table_name = 'Categories';
+
+    $connect = new mysqli($host, $user, $pass, $mydb);
+
+    if ($connect->connect_error) {
+        die("Cannot connect to $server using $user");
+    } else {
+        $Categories = $_POST['category'];
+
+        $sql = "SELECT * FROM Businesses WHERE Businesses.businessID IN (SELECT BusinessID FROM Biz_Categories WHERE Biz_Categories.CategoryID = '$Categories'";
+        $results_id = $connect->query($sql);
+
+        if ($results_id) {
+            print '<table border=1>';
+            print '<th>CatID<th>Title<th>Description';
+            while ($row = $results_id->fetch_object()) {
+                print '<tr>';
+                foreach ($row as $field) {
+                    print "<td>$field</td> ";
+                }
+                print '</tr>';
+            }
+        } else {
+            die("Query=$sql failed!");
+        }
+    }
+    ?>
+    <br>
+    <a href="index.php">
+        <button>
+            < EXP 1</button>
+    </a>
+    <a href="exp2.php">
+        <button>EXP 2 > </button>
+    </a>
+    <a href="exp3.php">
+        <button>EXP 3 > </button>
+    </a>
+</body>
+
 </html>
