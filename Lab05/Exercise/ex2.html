@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        form {
+
+            max-width: 350px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> <b>Business Registration</b> </h1>
+    <p>Record inserted as shown below</p>
+    <form action='./exp2_2.php' method='POST'>
+        <label> Busuness Name:</label>
+        <input type="text" size="20" maxlength="20" name="busunessName">
+        <label> Address:</label>
+        <input type="text" size="20" maxlength="20" name="address">
+        <label> City:</label>
+        <input type="text" size="20" maxlength="20" name="city">
+        <label> Telephone:</label>
+        <input type="text" size="20" maxlength="20" name="telephone">
+        <label> URL:</label>
+        <input type="text" size="20" maxlength="20" name="url">
+        <label> Selected category values </label>
+        <select name="name">
+            <?php
+            $host = 'db';
+            $user = 'root';
+            $pass = 'example';
+            $mydb = 'business_service';
+            $table_name = 'Categories';
+
+            $connect = new mysqli($host, $user, $pass, $mydb);
+
+            if ($connect->connect_error) {
+                die("Cannot connect to $server using $user");
+            } else {
+                $query = "SELECT title FROM $table_name";
+                $results_id = $connect->query($query);
+                while ($row = $results_id->fetch_object()) {
+                    foreach ($row as $field) {
+                        print "<option value= '$field'> $field </option>";
+                    }
+                }
+            }
+
+            ?>
+        </select>
+        <input type= "submit" value="Add Business">
+    </form>
+
+
+    <br>
+    <a href="index.php">
+        <button>
+            < EXP 1</button>
+    </a>
+    <a href="exp3.php">
+        <button>EXP 3 > </button>
+    </a>
+
+</body>
+
+</html>
