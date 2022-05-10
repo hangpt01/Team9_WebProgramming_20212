@@ -1,11 +1,11 @@
 <html><head><title>Create Table</title></head><body>
         <?php
         $server = 'localhost';
-        $user = 'phppgm';
-        $pass = 'mypasswd';
-        $mydb = 'mydatabase';
+        $user = 'root'; //change depend on personal sever
+        $pass = '140400';   //change depend on personal sever
+        $mydb = 'test'; 
         $table_name = 'Products';
-        $connect = mysql_connect($server, $user, $pass);
+        $connect = mysqli_connect($server, $user, $pass, $mydb);
         if (!$connect) {
 
             die("Cannot connect to $server using $user");
@@ -18,8 +18,8 @@
             Cost INT,
             Weight INT,
             Numb INT)";
-            mysql_select_db($mydb);
-            if (mysql_query($SQLcmd, $connect)) {
+            mysqli_select_db($connect, $mydb);
+            if (mysqli_query($connect, $SQLcmd)) {
 
                 print '<font size="4" color="blue" >Created Table';
 
@@ -30,7 +30,7 @@
 
                 die("Table Create Creation Failed SQLcmd=$SQLcmd");
             }
-            mysql_close($connect);
+            mysqli_close($connect);
         }
         ?></body></html>
 
