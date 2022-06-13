@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Stranger, please register!
+        </title>
+        <!--EXTERNAL DOCUMENTS--> 
+        <script src="./bootstrap.min.css"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="./bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="validateForm.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <form name="registerForm" onsubmit="return ValidateForm();">
+                <!-- return so that the form do not submit,
+                   the true/false gets passed up to the form's submit event (which looks for this and prevents
+                   submission if it gets a false).
+                   only submit when validation is true -->
+                <div class="wrapper fadeInDown" onsubmit="return ValidateForm();">
+                    <div id="formContent">
+                        <!-- Tabs Titles -->
+                        <h1 class="title"> Registration form</h1>
+                        <!-- Registration Information -->
+                        <input type="text" id="usernameField" name="username" placeholder="username">
+                        <input type="text" id="emailField" name="email" placeholder="email">
+                        <input type="text" id="passwordField" name="password" placeholder="password">
+                        <input type="text" id="phoneField" name="phone" placeholder="phone#">
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Clear">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

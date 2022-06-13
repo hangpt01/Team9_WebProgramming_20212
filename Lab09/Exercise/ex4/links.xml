@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages>
+  <link>
+    <title>Game</title>
+    <url>https://www.google.com/search?q=game</url>
+  </link>
+  <link>
+    <title>Music</title>
+    <url>https://www.google.com/search?q=music</url>
+  </link>
+  <link>
+    <title>Movie</title>
+    <url>https://www.google.com/search?q=movie</url>
+  </link>
+  <link>
+    <title>News</title>
+    <url>https://www.google.com/search?q=news</url>
+  </link>
+  <link>
+    <title>Facebook</title>
+    <url>https://www.facebook.com/</url>
+  </link>
+  <link>
+    <title>Youtube</title>
+    <url>https://www.youtube.com/</url>
+  </link>
+	<link>
+    <title>Web Programming</title>
+    <url>https://www.google.com/search?q=web+programming</url>
+  </link>
+</pages>

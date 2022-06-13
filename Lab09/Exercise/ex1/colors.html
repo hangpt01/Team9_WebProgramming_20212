@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colors</title>
+        <script type="text/javascript">
+            function setColor(color) {
+                var pTag = window.document.getElementsByTagName("p")[0];
+//                pTag.setAttribute("style", "color: "+color); //Should not do this as it can overwrite CSS attributes
+                pTag.style.color = color; //should do this -> this is add in-line styling
+            }
+        </script>
+    </head>
+    <body>
+        <a id="red-link" href="#" onMouseOver='setColor("red");' onmouseout='setColor("black")'>RED</a><br>
+        <a id="green-link" href="#" onMouseOver='setColor("green")' onmouseout='setColor("black")'>GREEN</a><br>
+        <a id="blue-link" href="#" onMouseOver='setColor("blue")' onmouseout='setColor("black")'>BLUE</a><br>
+        <p id='paragraph'>
+            This line can have different colors: RED, GREEN, and BLUE. The initial color is BLACK.<br>
+            As you hover the mouse over the links above, the color of this paragraph will change accordingly.
+            And it'll change back to BLACK if you move your mouse out of the link.
+        </p>
+    </body>
+</html>
