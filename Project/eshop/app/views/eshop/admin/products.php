@@ -474,10 +474,10 @@
 		data.append('brand',brand_input.value.trim());
 		data.append('price',price_input.value.trim());
 		data.append('data_type','add_product');
-		// data.append('image',image_input.files[0]);
+		data.append('image',image_input.files[0]);
  
 		send_data_files(data);
-		// header("Refresh:0");
+		//setTimeout(() => window.location.reload(), 100);
 		 
 	}
 
@@ -579,7 +579,8 @@
 
 			if(ajax.readyState == 4 && ajax.status == 200)
 			{
-				handle_result(ajax.responseText);
+				//handle_result(ajax.responseText);
+				window.location.reload();
 			}
 		});
 
@@ -596,7 +597,8 @@
 
 			if(ajax.readyState == 4 && ajax.status == 200)
 			{
-				handle_result(ajax.responseText);
+				//handle_result(ajax.responseText);
+				window.location.reload();
 			}
 		});
 
@@ -608,7 +610,7 @@
 
 	function handle_result(result)
 	{
- 	//console.log(result);
+ 		console.log(result);
 		if(result != ""){
 			var obj = JSON.parse(result);
 
