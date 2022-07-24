@@ -80,7 +80,7 @@
 
 			<table class="table">
 				<thead>
-					<tr><th>Order no</th><th>Order date</th><th>Total</th><th>Delivery Address</th><th>City/State</th><th>Mobile Phone</th><th>Status</th><th>...</th></tr>
+					<tr><th>Order no</th><th>Order date</th><th>Total</th><th>Delivery Address</th><th>City/State</th><th>Mobile Phone</th><th>...</th></tr>
 				</thead>
 				<tbody onclick="show_details(event)">
 					<?php foreach($orders as $order):?>
@@ -89,7 +89,7 @@
 							$status = is_paid($order);
 
 						?>
-						<tr style="position: relative;"><td><?=$order->id?></td><td><?=date("jS M Y H:i a",strtotime($order->date))?></td><td>$<?=$order->total?></td><td><?=$order->delivery_address?></td><td><?=$order->state?></td><td><?=$order->mobile_phone?><td><?=$status?></td>
+						<tr style="position: relative;"><td><?=$order->id?></td><td><?=date("jS M Y H:i a",strtotime($order->date))?></td><td>$<?=$order->total?></td><td><?=$order->delivery_address?></td><td><?=$order->state?></td><td><?=$order->mobile_phone?>
 							<td>
 								<i class="fa fa-arrow-down"></i>
 								<div class="js-order-details details hide" >

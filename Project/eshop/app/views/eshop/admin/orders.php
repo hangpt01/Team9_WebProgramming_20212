@@ -20,7 +20,7 @@
 <table class="table table-striped table-advance table-hover">
 
 	<thead>
-		<tr><th>Order no</th><th>Customer</th><th>Order date</th><th>Total</th><th>Delivery Address</th><th>City/State</th><th>Mobile Phone</th><th>Status</th><th>...</th></tr>
+		<tr><th>Order no</th><th>Customer</th><th>Order date</th><th>Total</th><th>Delivery Address</th><th>City/State</th><th>Mobile Phone</th><th>...</th></tr>
 	</thead>
 	<tbody onclick="show_details(event)">
 
@@ -28,9 +28,6 @@
 		<?php foreach($orders as $order):?>
 
 			<tr style="position: relative;"><td><?=$order->id?></td><td><a href="<?=ROOT?>profile/<?=$order->user->url_address?>"><?=$order->user->name?></a></td><td><?=date("jS M Y H:i a",strtotime($order->date))?></td><td>$<?=$order->total?></td><td><?=$order->delivery_address?></td><td><?=$order->state?></td><td><?=$order->mobile_phone?></td>
-				<td>
-					<?=is_paid($order)?>
-				</td>
 				<td>
 					<i class="fa fa-arrow-down"></i>
 					<div class="js-order-details details hide" >

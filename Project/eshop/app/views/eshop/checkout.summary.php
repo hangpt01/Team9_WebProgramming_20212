@@ -42,7 +42,7 @@
 											<tr><th>State</th><td><?=$order->state?></td></tr>
 											<tr><th>Delivery Address 1</th><td><?=$order->address1?></td></tr>
 											<tr><th>Delivery Address 2</th><td><?=$order->address2?></td></tr>
-											
+											<tr><th>Payment Method</th><td>Cash On Delivery</td></tr>
 										</table>
 										<table class="table" style="flex: 1;margin: 4px;">
 											<tr><th>Zip/Postal Code</th><td><?=$order->postal_code?></td></tr>
@@ -88,7 +88,7 @@
 				<input type="button" class="btn btn-warning pull-left" value="< Back to checkout" name="">
 			</a>
 			<form method="post">
-				<input type="submit" class="btn btn-warning pull-right" value="Pay >" name="">
+				<input type="submit" class="btn btn-warning pull-right" value="Complete >" name="">
 			</form>
 		</div>
 	</section> <!--/#cart_items-->

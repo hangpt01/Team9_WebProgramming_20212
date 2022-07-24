@@ -168,7 +168,7 @@ Class Checkout extends Controller
 			//unset($_SESSION['POST_DATA']);
 			unset($_SESSION['CART']);
 
-			header("Location:".ROOT."checkout/pay");
+			header("Location:".ROOT."checkout/thank_you?mode=approved");
 			die;
 		}
 
