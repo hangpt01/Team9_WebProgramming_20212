@@ -59,10 +59,10 @@
 				</table><div class="pull-right" style="font-size: 25px;">Sub Total: $<?=number_format($sub_total,2)?></div>
 			</div>
 			<a href="<?=ROOT?>checkout">
-				<input type="button" class="btn btn-warning pull-right" value="Checkout >" name="">
+				<input type="button" class="btn btn-primary pull-right" value="Checkout >" name="">
 			</a>
 			<a href="<?=ROOT?>shop">
-				<input type="button" class="btn btn-warning pull-left" value="< Continue shopping" name="">
+				<input type="button" class="btn btn-primary pull-left" value="< Continue shopping" name="">
 			</a>
 		</div>
 	</section> <!--/#cart_items-->

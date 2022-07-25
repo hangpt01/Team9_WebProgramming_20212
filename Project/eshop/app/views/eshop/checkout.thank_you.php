@@ -18,10 +18,10 @@
 
 		<div>What would you like to do next?</div><br>
 	<a href="<?=ROOT?>shop">
-		<input type="button" class="btn btn-warning" value="Continue shopping">
+		<input type="button" class="btn btn-primary" value="Continue shopping">
 	</a>
 	<a href="<?=ROOT?>profile">
-		<input type="button" class="btn btn-warning" value="View your orders">
+		<input type="button" class="btn btn-primary" value="View your orders">
 	</a>
 		
 		<br><br>

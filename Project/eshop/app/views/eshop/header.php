@@ -12,11 +12,9 @@
     <link href="<?= ASSETS . THEME ?>css/price-range.css" rel="stylesheet">
     <link href="<?= ASSETS . THEME ?>css/animate.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/main.css" rel="stylesheet">
+	
 	<link href="<?= ASSETS . THEME ?>css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="<?= ASSETS . THEME ?>js/html5shiv.js"></script>
-    <script src="<?= ASSETS . THEME ?>js/respond.min.js"></script>
-    <![endif]-->     
+         
  
     <link rel="shortcut icon" href="<?= ASSETS . THEME ?>images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-144-precomposed.png">
@@ -61,7 +59,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="<?=ROOT?>"><img src="<?= ASSETS . THEME ?>images/home/logo.png" alt="" /></a>
+							<a href="<?=ROOT?>"><img src="<?= ASSETS . THEME ?>images/home/logo2.png" alt="" /></a>
 						</div>
 						 
 					</div>
