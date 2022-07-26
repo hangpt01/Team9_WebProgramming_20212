@@ -170,13 +170,9 @@ INSERT INTO `order_details` (`id`, `orderid`, `qty`, `description`, `amount`, `t
 (10, 4, 2, 'Weet Bix 1.4 Kg', 20.99, 41.98, 8),
 (11, 5, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
 (12, 6, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(13, 7, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(14, 8, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
 (15, 8, 1, 'Weet Bix 1.4 Kg', 20.99, 20.99, 8),
 (16, 10, 1, 'Weet Bix 1.4 Kg', 20.99, 20.99, 8),
 (17, 11, 1, 'Milo Candy Bar', 12.99, 12.99, 9),
-(18, 12, 1, 'Milo Candy Bar', 12.99, 12.99, 9),
-(19, 13, 2, 'Milo Candy Bar', 12.99, 25.98, 9),
 (20, 21, 3, 'Alcohol', 0.21, 0.63, 10);
 
 -- --------------------------------------------------------
