@@ -20,7 +20,7 @@
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 						<br>
-						<a href="<?=ROOT?>signup">Dont have an account? Signup here</a>
+						<a href="<?=ROOT?>home/signup">Dont have an account? Signup here</a>
 					</div><!--/login form-->
 				</div>
 			 

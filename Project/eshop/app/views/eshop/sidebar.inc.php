@@ -92,8 +92,8 @@
                        	 					<td>
                        	 					<div>Price Range:</div>
                        	 					<div class="well text-center price-range" style="margin-top: 0px;margin-bottom: 0px;">
-												 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="5" data-slider-value="[<?php Search::get_sticky('number','min-price','',0)?>,<?php Search::get_sticky('number','max-price','',1000)?>]" id="sl2" ><br />
-												 <b class="pull-left">$ 0</b> <b class="pull-right">$ 1000</b>
+												 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="50" data-slider-step="5" data-slider-value="[<?php Search::get_sticky('number','min-price','',0)?>,<?php Search::get_sticky('number','max-price','',50)?>]" id="sl2" ><br />
+												 <b class="pull-left">$ 0</b> <b class="pull-right">$ 50</b>
  
                         	 						<input value="<?php Search::get_sticky('number','min-price')?>" class="form-control min-value" type="hidden" step="0.01" name="min-price">
                        	 							<input value="<?php Search::get_sticky('number','max-price')?>" class="form-control max-value" type="hidden" step="0.01" name="max-price">
@@ -109,8 +109,8 @@
                        	 						<div class="form-inline" >
 	                       	 						
 	                       	 						<div class="well text-center quantity-range" style="margin-top: 0px;margin-bottom: 0px;">
-														 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="5" data-slider-value="[<?php Search::get_sticky('number','min-qty','',0)?>,<?php Search::get_sticky('number','max-qty','',1000)?>]" id="sl3" ><br />
-														 <b class="pull-left">0</b> <b class="pull-right">1000</b>
+														 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="50" data-slider-step="5" data-slider-value="[<?php Search::get_sticky('number','min-qty','',0)?>,<?php Search::get_sticky('number','max-qty','',50)?>]" id="sl3" ><br />
+														 <b class="pull-left">0</b> <b class="pull-right">50</b>
 
 	                       	 							<input class="form-control min-value" type="hidden" value="<?php Search::get_sticky('number','min-qty')?>" step="1" name="min-qty">
 	                       	 							<input class="form-control max-value" type="hidden" value="<?php Search::get_sticky('number','max-qty')?>" step="1" name="max-qty">
@@ -157,11 +157,13 @@
 		var max_price = e.currentTarget.querySelector(".max-value");
 		
 		var values = tooltip.innerHTML;
+		
 		var parts = values.split(":");
 
 		min_price.value = parts[0].trim();
 		max_price.value = parts[1].trim();
-		
+		// console.log(values);
+		// console.log(parts);
 	}
 
 

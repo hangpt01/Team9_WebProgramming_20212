@@ -3,7 +3,7 @@
 	<div class="product-image-wrapper">
 		<div class="single-products">
 				<div class="productinfo text-center">
-					<a href="<?=ROOT?>product_details/<?=$data->slag?>">
+					<a href="<?=ROOT?>home/product_details/<?=$data->slag?>">
 					<div style="overflow: hidden;"><img class="product-image" src="<?= ROOT . $data->image?>" alt="" /></div>
 					</a>
 					<h2>$<?=$data->price?></h2>

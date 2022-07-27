@@ -6,8 +6,8 @@
 		
 		.add_edit_panel{
 
-			width: 500px;
-			height:650px;
+			width: 300px;
+			height:550px;
 			background-color: #eae8e8;
 			box-shadow: 0px 0px 10px #aaa;
 			position: absolute;
@@ -26,14 +26,15 @@
  		.edit_product_images{
 
  			display: flex;
- 			width: 100%;
+ 			width: 50%;
 
  		}
 
  		.edit_product_images img{
-
+			/* justify-content: center; */
  			flex: 1;
- 			width: 50px;
+ 			width: 80px;
+			
  			margin: 2px;
  			height: 80px;
  		}
@@ -184,7 +185,7 @@
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
-			                          <div class="form-group">
+			                          <!-- <div class="form-group">
 			                              <label class="col-sm-2 col-sm-2 control-label">Image2 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="image2" name="image2" type="file"  onchange="display_image(this.files[0],this.name,'js-product-images-add')" class="form-control" >
@@ -203,12 +204,12 @@
 			                              <div class="col-sm-10">
 			                                  <input id="image4" name="image4" type="file"  onchange="display_image(this.files[0],this.name,'js-product-images-add')" class="form-control" >
 			                              </div>
-			                          </div>
+			                          </div> -->
  										<div class="js-product-images-add edit_product_images">
               	  	  						<img src="">
+              	  	  						<!-- <img src="">
               	  	  						<img src="">
-              	  	  						<img src="">
-              	  	  						<img src="">
+              	  	  						<img src=""> -->
               	  	  					</div>		                          
               	  	  					
               	  	  					<button type="button" class="btn btn-warning" onclick="show_add_new(event)" style="position:absolute;bottom:10px; left:10px;">Close</button>
@@ -271,7 +272,7 @@
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
-			                          <div class="form-group">
+			                          <!-- <div class="form-group">
 			                              <label class="col-sm-2 col-sm-2 control-label">Image2 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_image2" name="image2" type="file" onchange="display_image(this.files[0],this.name,'js-product-images-edit')" class="form-control" >
@@ -290,7 +291,7 @@
 			                              <div class="col-sm-10">
 			                                  <input id="edit_image4" name="image4" type="file" onchange="display_image(this.files[0],this.name,'js-product-images-edit')" class="form-control" >
 			                              </div>
-			                          </div>
+			                          </div> -->
               	  	  					<br>
               	  	  					<div class="js-product-images-edit edit_product_images">
               	  	  						
@@ -380,9 +381,9 @@
 			
 			var product_images_input = document.querySelector(".js-product-images-edit");
 			product_images_input.innerHTML = `<img src="<?=ROOT?>${info.image}" />`;
-			product_images_input.innerHTML += `<img src="<?=ROOT?>${info.image2}" />`;
-			product_images_input.innerHTML += `<img src="<?=ROOT?>${info.image3}" />`;
-			product_images_input.innerHTML += `<img src="<?=ROOT?>${info.image4}" />`;
+			// product_images_input.innerHTML += `<img src="<?=ROOT?>${info.image2}" />`;
+			// product_images_input.innerHTML += `<img src="<?=ROOT?>${info.image3}" />`;
+			// product_images_input.innerHTML += `<img src="<?=ROOT?>${info.image4}" />`;
 		
 		}
 		
@@ -448,23 +449,23 @@
  		//create a form
 		var data = new FormData();
 
- 		var image2_input = document.querySelector("#image2");
-		if(image2_input.files.length > 0)
-		{
-			data.append('image2',image2_input.files[0]);
-		}
+ 		// var image2_input = document.querySelector("#image2");
+		// if(image2_input.files.length > 0)
+		// {
+		// 	data.append('image2',image2_input.files[0]);
+		// }
 
- 		var image3_input = document.querySelector("#image3");
-		if(image3_input.files.length > 0)
-		{
-			data.append('image3',image3_input.files[0]);
-		}
+ 		// var image3_input = document.querySelector("#image3");
+		// if(image3_input.files.length > 0)
+		// {
+		// 	data.append('image3',image3_input.files[0]);
+		// }
 
- 		var image4_input = document.querySelector("#image4");
-		if(image4_input.files.length > 0)
-		{
-			data.append('image4',image4_input.files[0]);
-		}
+ 		// var image4_input = document.querySelector("#image4");
+		// if(image4_input.files.length > 0)
+		// {
+		// 	data.append('image4',image4_input.files[0]);
+		// }
 		
 		
 
@@ -522,24 +523,24 @@
 			data.append('image',image_input.files[0]);
 		}
 
-		var image2_input = document.querySelector("#edit_image2");
-		if(image2_input.files.length > 0)
-		{
-			data.append('image2',image2_input.files[0]);
-		}
+		// var image2_input = document.querySelector("#edit_image2");
+		// if(image2_input.files.length > 0)
+		// {
+		// 	data.append('image2',image2_input.files[0]);
+		// }
 		
 
- 		var image3_input = document.querySelector("#edit_image3");
-		if(image3_input.files.length > 0)
-		{
-			data.append('image3',image3_input.files[0]);
-		}
+ 		// var image3_input = document.querySelector("#edit_image3");
+		// if(image3_input.files.length > 0)
+		// {
+		// 	data.append('image3',image3_input.files[0]);
+		// }
 
- 		var image4_input = document.querySelector("#edit_image4");
-		if(image4_input.files.length > 0)
-		{
-			data.append('image4',image4_input.files[0]);
-		}
+ 		// var image4_input = document.querySelector("#edit_image4");
+		// if(image4_input.files.length > 0)
+		// {
+		// 	data.append('image4',image4_input.files[0]);
+		// }
 		
 		// var description = product_input.value.trim();
 		// var quantity = quantity_input.value.trim();

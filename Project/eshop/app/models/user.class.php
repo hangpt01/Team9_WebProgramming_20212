@@ -65,7 +65,7 @@ Class User
 
 			if($result){
 
-				header("Location: " . ROOT . "login");
+				header("Location: " . ROOT . "home/login");
 				die;
 			}
 
@@ -223,7 +223,7 @@ Class User
 			}
 			
 			$_SESSION['intended_url'] = FULL_URL; 
-			header("Location: " . ROOT . "login");
+			header("Location: " . ROOT . "home/login");
 			die;
  
 		}else{
@@ -244,7 +244,7 @@ Class User
 
 			if($redirect){
 				$_SESSION['intended_url'] = FULL_URL; 
-				header("Location: " . ROOT . "login");
+				header("Location: " . ROOT . "home/login");
 				die;
 			}
 		}

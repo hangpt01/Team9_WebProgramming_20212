@@ -43,7 +43,7 @@ Class Add_to_cart extends Controller
 			
 		}
 
-		header("Location: ". ROOT . "cart");
+		header("Location: ". ROOT . "home/cart");
 		die;
 	}
 

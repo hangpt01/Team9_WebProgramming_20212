@@ -71,12 +71,12 @@
 								<?php endif; ?>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="<?=ROOT?>checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="<?=ROOT?>cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?=ROOT?>home/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								
 								<?php if(isset($data['user_data'])): ?>
-									<li><a href="<?=ROOT?>logout"><i class="fa fa-lock"></i> Logout</a></li>
+									<li><a href="<?=ROOT?>home/logout"><i class="fa fa-lock"></i> Logout</a></li>
 								<?php else: ?>
- 									<li><a href="<?=ROOT?>login"><i class="fa fa-lock"></i> Login</a></li>
+ 									<li><a href="<?=ROOT?>home/login"><i class="fa fa-lock"></i> Login</a></li>
 								<?php endif; ?>
 
 							</ul>

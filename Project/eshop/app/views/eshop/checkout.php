@@ -115,7 +115,7 @@
 		</h3>
 	<?php endif;?>
 
-			<a href="<?=ROOT?>cart">
+			<a href="<?=ROOT?>home/cart">
 				<input type="button" class="btn btn-primary pull-left" value="< Back to cart" name="">
 			</a>
 		</div>

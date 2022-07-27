@@ -2,7 +2,7 @@
 	
 	<section id="advertisement">
 		<div class="container">
-			<img src="<?=ASSETS.THEME?>images/shop/advertisement.jpg" alt="" />
+			<img src="<?=ASSETS.THEME?>images/shop/advertisement2.jpg" alt="" />
 		</div>
 	</section>
 	

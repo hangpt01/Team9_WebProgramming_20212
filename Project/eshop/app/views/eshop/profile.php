@@ -47,17 +47,7 @@
 			</div>
 			<p><img src="<?=ASSETS . THEME ?>admin/img/ui-zac.jpg" class="img-circle" width="80"></p>
 			<p><b><?=$profile_data->name?></b></p>
-			<div class="row">
-				<div class="col-md-6">
-					<p id="user_text" class="small mt">MEMBER SINCE</p>
-					<p><?=date("jS M Y",strtotime($profile_data->date))?></p>
-				</div>
-				<div class="col-md-6">
-					<p id="user_text" class="small mt">TOTAL SPEND</p>
-					<p>$ 47,60</p>
-				</div>
-
-			</div>
+			
 			<hr style="color:#888">
 			<div class="row">
 				<div class="col-md-6">
